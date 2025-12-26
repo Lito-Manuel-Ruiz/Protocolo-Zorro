@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Protocolo Zorro</title>
+</head>
+<body>
+
+<h1>PROTOCOLO ZORRO</h1>
+<p>Autor: Manuel Ruiz (RUN 13.069.176-5, Chile)</p>
+<p><a href="https://doi.org/10.5281/zenodo.18049665">https://doi.org/10.5281/zenodo.18049665</a></p>
+
+<h2>Capítulo I</h2>
+<pre id="cap1"></pre>
+
+<h2>Capítulo II</h2>
+<pre id="cap2"></pre>
+
+<h2>Capítulo III</h2>
+<pre id="cap3"></pre>
+
+<h2>Capítulo IV</h2>
+<pre id="cap4"></pre>
+
+<h2>Capítulo V</h2>
+<pre id="cap5"></pre>
+
+<script>
+async function loadChapter(id, url) {
+    const resp = await fetch(url);
+    const text = await resp.text();
+    document.getElementById(id).textContent = text;
+}
+
+loadChapter("cap1", "https://raw.githubusercontent.com/Lito-Manuel-Ruiz/Protocolo-Zorro/refs/heads/main/Protocolo%20Zorro%20UTF-8%20Capitulo%20I.txt");
+loadChapter("cap2", "https://raw.githubusercontent.com/Lito-Manuel-Ruiz/Protocolo-Zorro/refs/heads/main/Protocolo%20Zorro%20UTF-8%20Capitulo%20II.txt");
+loadChapter("cap3", "https://raw.githubusercontent.com/Lito-Manuel-Ruiz/Protocolo-Zorro/refs/heads/main/Protocolo%20Zorro%20UTF-8%20Capitulo%20III.txt");
+loadChapter("cap4", "https://raw.githubusercontent.com/Lito-Manuel-Ruiz/Protocolo-Zorro/refs/heads/main/Protocolo%20Zorro%20UTF-8%20Capitulo%20IV.txt");
+loadChapter("cap5", "https://raw.githubusercontent.com/Lito-Manuel-Ruiz/Protocolo-Zorro/refs/heads/main/Protocolo%20Zorro%20UTF-8%20Capitulo%20V.txt");
+</script>
+
+</body>
+</html>
